@@ -1,0 +1,117 @@
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 5px auto;
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "res       res     res     res"
+                         "siete     ocho    nueve   dividir"
+                         "cuatro    cinco   seis    multiplicar"
+                         "uno       dos     tres    sumar"
+                         "cero      igual   igual   restar";
+}
+
+.container > button {
+    height: 100px;
+    background: #FF9914;
+    font-size: 32px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container >button:hover{
+    background: #C6680F ;
+}
+
+.container .cajaresultado {
+    grid-area: res;
+    height: 50px;
+    font-size: 32px;
+    text-align: right;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container .caja1{
+    grid-area: uno;
+}
+
+.container .caja2{
+    grid-area: dos;
+}
+
+.container .caja3{
+    grid-area: tres;
+}
+
+.container .caja4{
+    grid-area: cuatro;
+}
+
+.container .caja5{
+    grid-area: cinco;
+}
+
+.container .caja6{
+    grid-area: seis;
+}
+
+.container .caja7{
+    grid-area: siete;
+}
+
+.container .caja8{
+    grid-area: ocho;
+}
+
+.container .caja9{
+    grid-area: nueve;
+}
+
+.container .caja0{
+    grid-area: cero;
+}
+
+.container .cajaDividir{
+    grid-area: dividir;
+}
+
+.container .cajaMultiplicar{
+    grid-area: multiplicar;
+}
+.container .cajaSumar{
+    grid-area: sumar;
+}
+.container .cajaRestar{
+    grid-area: restar;
+}
+.container .cajaIgual{
+    grid-area: igual;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas: "res       res     res     res"
+        "siete     ocho    nueve   dividir"
+        "cuatro    cinco   seis    multiplicar"
+        "uno       dos     tres    sumar"
+        "cero      igual   igual   restar";;
+    }
+
+    .container > button {
+        width: 100%;
+        height: 150px;
+        font-size: 50px;
+    }
+
+    .container input[type=text]{
+        max-width: 768px;
+    }
+}
